@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rot-converter"
+version = "3.0.0b1"
+authors = [
+    {name = "BasicSweater", email = "basicsweater@petalmail.com"},
+]
+description = "A library for the ROT cipher."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["rot", "converter", "release"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/BasicTShirt/rot-converter/blob/main/README.md"
+Repository = "https://github.com/BasicTShirt/rot-converter"
+
+[tool.setuptools]
+packages = ["src/rot_converter"]
+
+[project.scripts]
+rot-converter = "rot_converter.cli:main"
