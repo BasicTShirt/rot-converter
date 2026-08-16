@@ -31,7 +31,7 @@ Homepage = "https://github.com/BasicTShirt/rot-converter/blob/main/README.md"
 Repository = "https://github.com/BasicTShirt/rot-converter"
 
 [tool.setuptools]
-packages = ["src/rot_converter"]
+packages = ["src"]
 
 [project.scripts]
 rot-converter = "rot_converter.cli:main"
