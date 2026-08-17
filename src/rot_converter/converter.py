@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# version 3.0.0b1
+# version 3.0.0b2
 import unicodedata
 
 try:
@@ -197,7 +197,7 @@ class ROTConvertor():
             self,
             rot_string: str,
             rot_language_or_custom_alphabet: str,
-    ) -> str:
+    ) -> list[tuple[int, str, float]]:
         self.smart_mode_state = True
         self._combine_error_handler(
             rot_string,
@@ -230,8 +230,10 @@ class ROTConvertor():
         score_total = 0
 
         for symbol in rot_string_score:
-            if symbol in score_counts:
-                score_counts[symbol] += 1
+            upper = symbol.upper()
+
+            if upper in score_counts:
+                score_counts[upper] += 1
                 score_total += 1
 
         if score_total == 0:

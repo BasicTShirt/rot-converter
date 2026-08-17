@@ -7,10 +7,10 @@ Main features:
 - Error handling with clear messages.
 """
 
-__version__ = "3.0.0b1"
+__version__ = "3.0.0b2"
 __author__ = "BasicSweater"
 __email__ = "basicsweater@petalmail.com"
 
-from .converter import m_rot, b_rot
+from .converter import m_rot, b_rot, smart_rot
 
-__all__ = ["m_rot", "b_rot"]
+__all__ = ["m_rot", "b_rot", "smart_rot"]
